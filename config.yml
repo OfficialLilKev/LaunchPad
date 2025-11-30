@@ -1,0 +1,18 @@
+---
+# How strong is the forward push? (Recommended: 1.5 - 3.0)
+force: 2.0
+
+# How much upward lift should they get? (Recommended: 0.5 - 1.0)
+# This prevents them from being drilled into the ground.
+vertical_lift: 0.8
+
+# Should we play a sound when launched?
+sound: true
+
+# Which blocks act as launchpads?
+# You can add "stone_pressure_plate" or "heavy_weighted_pressure_plate" here.
+blocks:
+  - "oak_pressure_plate"
+  - "spruce_pressure_plate"
+  - "birch_pressure_plate"
+...
