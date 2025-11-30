@@ -1,39 +1,53 @@
-# LaunchPadPlugin
+# 🚀 LaunchPadPlugin (v2.0)
 
-**LaunchPadPlugin** is a simple PocketMine-MP plugin that enhances gameplay by launching players forward when they step on a wooden pressure plate.
+**LaunchPadPlugin** is a lightweight, physics-based launchpad solution for PocketMine-MP 5.0+. It replaces old, glitchy teleportation methods with smooth velocity calculations, "throwing" players through the air for a realistic parkour or hub experience.
 
-## Features
+### ✨ Key Features
 
-- Launches players forward by a customizable distance when they step on a wooden pressure plate.
-- Easy to set up and integrate into your PocketMine-MP server.
+* **Physics-Based Launching:** Uses `setMotion()` vectors instead of teleportation. Players arc through the air smoothly.
+* **Fully Configurable:** Adjust the **Forward Force** and **Vertical Lift** to get the perfect jump arc for your lobby.
+* **Multi-Block Support:** Define any block as a launchpad in the config (e.g., specific pressure plates, slime blocks, etc.).
+* **Audio Feedback:** Plays a sound effect (Ghast Shoot) upon launch (toggleable).
+* **Spam Prevention:** Built-in cooldowns prevent players from getting stuck or crashing the server by standing on the plate.
 
-## Installation
+---
 
-1. Download the LaunchPad Plugin
-2. Place the file in the `plugins` folder of your PocketMine-MP server.
-3. Restart your server.
+### 📥 Installation
 
-## Configuration
+1. Download the plugin `.phar` or source code.
+2. Place it into your server's `/plugins/` folder.
+3. Restart the server to generate the default configuration.
 
-The plugin does not require additional configuration. By default, players will be launched forward by 10 blocks when they step on a wooden pressure plate.
+---
 
-## Usage
+### ⚙️ Configuration
 
-- Place a wooden pressure plate on the ground in your server.
-- When a player steps on the pressure plate, they will be launched forward.
+You can find the `config.yml` in `plugin_data/LaunchPadPlugin/`.
 
-## Customization
+```yaml
+# LaunchPadPlugin Configuration
 
-You can customize the launch distance by modifying the `launchPlayer` method in the `LaunchPadPlugin.php` file.
+# How strong is the forward push? (Higher = Further distance)
+# Recommended: 1.5 - 3.0
+force: 2.0
 
-## Permissions
+# How much upward lift should they get? (Higher = Higher arc)
+# Recommended: 0.5 - 1.5
+vertical_lift: 0.8
 
-The plugin does not use any permissions.
+# Should a sound play when launched?
+sound: true
 
-## Support
+# List of blocks that act as launchpads.
+# Use standard Minecraft block names (e.g., oak_pressure_plate).
+blocks:
+  - "oak_pressure_plate"
+  - "spruce_pressure_plate"
+  - "heavy_weighted_pressure_plate"
 
-For any issues, feature requests, or questions, please open an issue in the [GitHub repository](https://github.com/yourusername/LaunchPadPlugin).
+📝 Requirements
+PocketMine-MP: 5.0.0 or higher
 
-## License
+PHP: 8.1+
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Developed for the PocketMine Community.
