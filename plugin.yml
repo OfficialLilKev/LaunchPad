@@ -1,14 +1,6 @@
 name: LaunchPadPlugin
-version: 1.0.0
-api: [4.0.0, 5.0.0]
-author: YourName
+version: 2.0.0
+api: [5.0.0]
+author: OfficialLilKev
 main: LaunchPad\LaunchPadPlugin
-description: A simple PocketMine-MP plugin that launches players forward when they step on a wooden pressure plate.
-depend: []
-
-commands: []
-
-permissions: []
-
-events:
-  - \LaunchPad\LaunchPadPlugin::onPressurePlateActivate
+description: Advanced launchpad plugin with physics and configuration.
